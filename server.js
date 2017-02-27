@@ -40,6 +40,7 @@ hbs.registerHelper('getCurrentYear', () => {
 hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
 });
+
 ///////////////////////////////////////////////////////////////////////////////////
 //http route Handler
 app.get('/', (req, res) => {
@@ -52,6 +53,13 @@ app.get('/about', (req,res) => {
   //res.send('<h1>About page</h1>');
   res.render('about.hbs', {
     pageTitle: 'About Page',
+  });
+});
+app.get('/portfolio', (req,res) => {
+  //res.send('<h1>About page</h1>');
+  res.render('portfolio.hbs', {
+    pageTitle: 'Portifolio Page',
+    portfolioText: 'This are my Projects!'
   });
 });
 
